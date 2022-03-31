@@ -56,9 +56,12 @@ for seat_number in range(1,16):
 
 print (seats_text)
 seat_choice = None
-while seat_choice == None:
-    seat_choice = input ('Please enter your seat: ')
-    if 
+while seat_choice not in range(1,16):
+    try:
+        seat_choice = int(input ('Please enter your seat: '))
+    except:
+        print("Wrong seat.")
+        seat_choice = None
 
 
 #Finally print user's choices
